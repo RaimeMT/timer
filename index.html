@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+  <meta name="description" content="temporizador estilo pomodoro" >
+  <title>Focus Timer v2</title>
+
+  <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-svg">
+  
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <script type="module" src="src/main.js" defer></script>
+
+</head>
+<body>
+
+<div id="app">
+
+  <section>
+    <div id="timer" class="flex">
+      <span id="minutes">00</span>
+      <span>:</span>
+      <span id="seconds">00</span>
+    </div>
+
+
+    <div id="controls">
+      <button 
+      data-action ="toggleRunning"
+      class="ph ph-play-circle">
+        <span class="sr-only"> iniciar contador</span>
+      </button>
+
+      <button 
+      data-action ="toggleRunning"
+      class="ph ph-pause-circle">
+        <span class="sr-only"> pausar contador</span>
+      </button>
+
+      <button 
+      data-action="plus"
+      class="ph ph-plus-circle">
+        <span class="sr-only"> acrescentar em 5 minutos no contador</span>
+      </button>
+
+      <button 
+      data-action="minus"
+      class="ph ph-minus-circle">
+        <span class="sr-only"> retirar 5 minutos do contador</span>
+      </button>
+
+      <button 
+      data-action ="set"
+      class="ph ph-timer secondary">
+        <span class="sr-only"> resetar o contador</span>
+      </button>
+
+      <button 
+      data-action ="reset"
+      class="ph ph-stop-circle secondary">
+        <span class="sr-only"> Reiniciar o contador</span>
+      </button>
+    </div>
+  </section>
+
+  
+  <section id="music">
+    <button
+    data-action="forest"
+    class="ph ph-tree"></button>
+
+    <button 
+    data-action="rain"
+    class="ph ph-cloud-rain"></button>
+
+    <button 
+    data-action="coffee"
+    class="ph ph-storefront"></button>
+
+    <button 
+    data-action="fire"
+    class="ph ph-flame"></button>
+    
+  </section>
+
+</div>
+
+
+  
+</body>
+</html>
